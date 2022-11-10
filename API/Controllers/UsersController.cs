@@ -1,7 +1,7 @@
 
 using API.Data;
 using API.Entities;
-
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -11,6 +11,7 @@ namespace API.Controllers
 {
 
     [ApiController]
+    [EnableCors("MyPolicy")]
     [Route("api/[controller]")]
     public class UsersController : ControllerBase
     {
